@@ -1,0 +1,6 @@
+---
+- name: configure ssh
+  win_copy:
+    src: sshd_config
+    dest: "C:\\ProgramData\\ssh\\sshd_config"
+  notify: restart sshd

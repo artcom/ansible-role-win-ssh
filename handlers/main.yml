@@ -1,0 +1,5 @@
+---
+- name: restart sshd
+  win_shell: Restart-Service sshd
+  args:
+    executable: powershell
