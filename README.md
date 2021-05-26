@@ -1,4 +1,4 @@
-# User
+# SSH
 Ansible role to configure SSH on a Windows 10 machine.
 
 ## Description

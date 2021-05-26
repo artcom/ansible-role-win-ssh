@@ -1,13 +1,13 @@
 ---
 - name: do not match administrators group
-  win_lineinfile:
+  community.windows.win_lineinfile:
     path: C:\ProgramData\ssh\sshd_config
     regex: "^#?Match Group administrators"
     line: "#Match Group administrators"
   notify: restart sshd
 
 - name: do not set authorized_keys file for administrators
-  win_lineinfile:
+  community.windows.win_lineinfile:
     path: C:\ProgramData\ssh\sshd_config
     regex: "^#?\\s+AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys"
     line: "#        AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys"
