@@ -12,3 +12,6 @@
     regex: "^#?\\s+AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys"
     line: "#        AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys"
   notify: restart sshd
+
+- name: flush handlers
+  ansible.builtin.meta: flush_handlers
